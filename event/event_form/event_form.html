@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/event_form.css">
+  <link rel="icon" href="../../favicon.ico"/>
+
+  <script src="../../assets/js/jquery-3.6.1.min.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script src="../../assets/js/datetime.js"></script>
+  <script src="../../assets/js/form_varidate.js"></script>
+
+
+  <title>Reserve_Gambit</title>
+</head>
+
+
+
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div id="header_wrapper" class="ds_f jc_sb">
+        <div class="h_logo">
+          <p><a href="../../index.html"><img src="../../assets/images/logo/Gambit_logo_w.svg" alt="ギャンビットのロゴ"></a></p>
+        </div>
+
+        <div class="menu_btn">
+
+          <div class="open_btn"><span></span><span>Menu</span><span></span>
+          </div>
+          <div class="nav_list">
+            <nav class="g_nav">
+              <ul>
+                <li><a href="../../about/index.html">ABOUT</a></li>
+                <li><a href="../../chess/index.html">CHESS</a></li>
+                <li><a href="../../menu/index.html">MENU</a></li>
+                <li><a href="../../news/index.html">NEWS</a></li>
+                <li><a href="../../price/index.html">PRICE</a></li>
+                <li><a href="../index.html">EVENT</a></li>
+                <li><a href="..access/index.html">ACCESS</a></li>
+                <li><a href="../../qa/index.html">QA</a></li>
+              </ul>
+
+            </nav>
+
+          </div>
+
+        </div>
+
+
+      </div>
+      <div id="fixed_header" class="ds_f jc_sb">
+        <div class="h_logo">
+          <p><a href="../../index.html"><img src="../../assets/images/logo/Gambit_logo_w.svg" alt="ギャンビットのロゴ"></a></p>
+        </div>
+
+        <div class="menu_btn">
+
+          <div class="open_btn"><span></span><span>Menu</span><span></span>
+          </div>
+          <div class="nav_list">
+            <nav class="g_nav">
+              <ul>
+                <li><a href="../../about/index.html">ABOUT</a></li>
+                <li><a href="../../chess/index.html">CHESS</a></li>
+                <li><a href="../../menu/index.html">MENU</a></li>
+                <li><a href="../../news/index.html">NEWS</a></li>
+                <li><a href="../../price/index.html">PRICE</a></li>
+                <li><a href="../../event/index.html">EVENT</a></li>
+                <li><a href="../../access/index.html">ACCESS</a></li>
+                <li><a href="../../qa/index.html">QA</a></li>
+              </ul>
+
+            </nav>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </header>
+
+    <!-- header end -->
+
+
+    <!-- main -->
+
+    <main>
+      <div id="main_wrapper">
+        <p class="breadcrumb">
+          <a href="../../index.html"> HOME</a> &gt; <a href="../../event/index.html">
+            <span>EVENT</span></a><span>&gt;Reserve</span>
+        </p>
+
+        <!-- contact_form-->
+        <div id="form_contents" class="inner tx_c">
+
+          <h2>ご予約フォーム</h2>
+          <form action="/form.php" method="post" id="form">
+
+            <!-- reserve -->
+            <div class="select_wrapper inner">
+
+              <div class="selectdiv tx_c">
+                <label>
+                  <select>
+                    <option value="" hidden>該当するものを選択してください</option>
+                    <option value="seat">座席のみ</option>
+                    <option value="party">パーティプラン</option>
+                    <option value="charter">貸切プラン</option>
+                    <option value="lesson">レッスン申し込み</option>
+                    <option value="match">12月のイベント参加希望</option>
+                  </select>
+                  
+                </label>
+                <p class="alert">※選択してください</p>
+              </div>
+
+
+            </div>
+
+
+            <div class="date_time ds_f">
+
+              <label for="date-time-local">日時選択</label>
+                <input type="datetime-local"  id="date-time-local">
+              
+              
+              <p class="alert">※日時を入力してください</p>
+              <p>※レッスン申し込みの方は、参加可能な日時をご入力ください。</p>
+              <p>※イベント参加者はイベント開催日時をご入力ください。</p>
+            </div>
+
+
+
+            <div class="name">
+              <label for="name">お名前</label>
+              <input type="text" placeholder="例）山田太郎" name="name" id="name" class="form_input">
+              <p class="alert">※お名前を入力してください</p>
+            </div>
+
+            <div class="email">
+              <label for="email">メールアドレス</label>
+              <input type="email" name="email" id="email" placeholder="メールアドレスを入力してください" class="form_input">
+              <p class="alert">※メールアドレスを入力してください</p>
+            </div>
+
+            <div class="tel">
+              <label for="tel">電話番号</label>
+
+              <input type="tel" name="tel" id="tel" class="form_input" placeholder="例）080-1234-5678">
+              <p class="alert">※電話番号を入力してください</p>
+            </div>
+
+            <div class="message">
+              <label for="message">お問い合わせ内容</label>
+              <p class="alert">※内容を入力してください</p>
+              <textarea name="message" id="message" cols="10" rows="10" class="form_textarea"></textarea>
+            </div>
+
+            <div class="protocol ds_f jc_c">
+
+              <input type="checkbox" name="protocol" id="protocol">
+              <p><a href="#">利用規約</a>に同意します。</p>
+              <p class="alert">※チェックボックスが入力されていません</p>
+            </div>
+
+
+            <div id="submit">
+              <input type="submit" value="送信する" class="form_submit">
+            </div>
+
+          </form>
+        </div>
+
+
+        <!-- /contact_form -->
+
+
+
+      </div>
+    </main>
+
+    <!-- main end -->
+
+
+    <!-- footer -->
+
+    <footer>
+      <div id="footer_wrapper">
+        <div class="sns ds_f jc_c">
+          <div class="insta ds_f">
+              <p><a href="#"><img src="../../assets/images/SNS/Instagram_Glyph_Gradient_RGB.png" alt="インスタグラムのアイコン"></a></p>
+          </div>
+          <div class="twitter">
+              <p><a href="#"><img src="../../assets/images/SNS/2021_Twitter_logo_blue.png" alt="ツイッターのアイコン"></a></p>
+          </div>
+      </div>
+      <div class="f_nav">
+        <nav>
+            <ul class="ds_f jc_sb">
+                <li class="f_title"><span>about</span>
+                    <ul class="f_about">
+                        <li><a href="../../about/index.html">Gambitについて</a></li>
+                        <li><a href="../../about/gallery/gallery.html">ギャラリー</a></li>
+                    </ul>
+                </li>
+
+                <li class="f_title"><span>chess</span>
+                    <ul class="f_chess">
+                        <li><a href="../../chess/index.html#c_rule">チェスのルール</a></li>
+                        <li><a href="../../chess/index.html#c_history">チェスの歴史</a></li>
+                        <li><a href="../../chess/chess_match/chessmatch.html">CPU対戦</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="f_title"><span>menu</span>
+                    <ul class="f_menu">
+                        <li><a href="../../menu/index.html#m_food">フードメニュー</a></li>
+                        <li><a href="../../menu/index.html#m_drink">アルコール</a></li>
+                        <li><a href="../../menu/index.html#m_a_drink">ノンアルコール</a></li>
+                    </ul>
+                </li>
+
+
+
+                <li class="f_title"><span>news</span>
+                    <ul class="f_news">
+                        <li><a href="../../news/index.html">お知らせ</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="f_title"><span>event</span>
+                    <ul class="f_event">
+                        <li><a href="../../event/index.html">イベント告知</a></li>
+                    </ul>
+                </li>
+
+                <li class="f_title"><span>price</span>
+                    <ul class="f_price">
+                        <li><a href="../../price/index.html">料金システム</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="f_title"><span>access</span>
+                    <ul class="f_access">
+                        <li><a href="../../access/index.html">アクセスマップ</a></li>
+                    </ul>
+                </li>
+
+                <li class="f_title"><span>Q&A</span>
+                    <ul class="f_qa">
+                        <li><a href="../../qa/index.html">よくある質問</a></li>
+                        <li><a href="../../event/event_form/event_form.html">予約ページ</a></li>
+                        <li><a href="../../qa/contact/contact.html">お問い合わせ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+        
+
+        <div class="f_info ds_f jc_sb inner">
+          <div class="f_left">
+            <address>
+              <div class="tel">
+                <p>Tel:03-0000-0000</p>
+              </div>
+              <div class="email">
+                <p>E-mail:gambit@com</p>
+              </div>
+            </address>
+          </div>
+          <div class="f_logo tx_c">
+            <p><a href="../../index.html"><img src="../../assets/images/logo/Gambit_logo_l.svg" alt="ギャンビットのロゴ"></a></p>
+          </div>
+
+
+          <div class="f_right">
+            <small>&copy;Copyright</small>
+            <p>Blue Gene Co., Ltd</p>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>

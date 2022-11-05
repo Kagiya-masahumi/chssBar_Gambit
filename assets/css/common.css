@@ -1,0 +1,908 @@
+@charset "UTF-8";
+
+
+/* common */
+
+
+
+body{
+    background-color: #000000;
+    width: 100%;
+    font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+    color: #f5f5f5;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+nav{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3{
+    font-size: 1.25rem;
+}
+
+
+
+.inner{
+    width: 960px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.ds_f{
+    display: flex;
+}
+
+.jc_sb{
+    justify-content: space-between;
+}
+
+.jc_sa{
+    justify-content: space-around;
+}
+
+.jc_c{
+    justify-content: center;
+}
+
+.tx_c{
+    text-align: center;
+}
+
+.ai_c{
+    align-items: center;
+}
+
+.h_logo{
+    width: 200px;
+    height: auto;
+}
+
+.f_logo{
+    width: 250px;
+    margin: auto;
+    padding: auto;
+    
+}
+
+p{
+    font-size: 1rem;
+    text-shadow: #303030;
+}
+
+
+h2{
+    font-size: 2rem; /*(36px)*/
+    letter-spacing: 2rem;
+    margin-bottom: 50px;
+    
+}
+
+
+
+
+/* header_menu */
+    /* ハンバーガーメニュー */
+
+
+    /* test */
+header{
+    position: relative;
+    height: 100vh;
+}
+
+header h1{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: #fff;
+letter-spacing: 6px;
+text-shadow: 0 0 10px #333;
+
+}
+
+#fixed_header {
+    position: fixed;
+    top: -130px;  
+    width: 100%;
+    height: 100px;
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, .7);
+    box-sizing: border-box;
+    transition: .5s; /* アニメーションタイミング */
+}
+#fixed_header.is-show {
+top: 0;
+z-index: 50;
+}
+
+.video_area{
+position: fixed;
+z-index: -1;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+overflow: hidden;
+
+}
+
+.video{
+position: absolute;
+z-index: -1;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 177.77777778vw;
+/* height: 56.25vh; */
+min-width: 100%;
+min-height: 100%;
+}
+
+    
+
+
+.menu_btn{
+    display: block;
+    padding: 30px;
+}
+.open_btn{
+
+    position: relative;/*ボタン内側の基点*/
+    background:#c09932;
+    cursor: pointer;
+    width: 50px;
+    height:50px;
+    border-radius: 5px;
+    z-index: 3000;
+}
+
+.open_btn span{
+    display: inline-block;
+    transition: all 400ms;/*アニメーションの設定*/
+    position: absolute;
+}
+
+
+/*  上の棒 */
+.open_btn span:nth-of-type(1),
+/*  下の棒 */
+.open_btn span:nth-of-type(3) {
+    height: 2px;
+    background-color: #fff;
+    width: 62%;
+    left: 10px;
+}
+
+.open_btn span:nth-of-type(1) {
+top:13px; 
+}
+/* 「Menu」部分 */
+.open_btn span:nth-of-type(2) {
+top:18px;
+left:11px;
+font-size:0.6rem;
+text-transform: uppercase;
+color: #fff;
+}
+
+.open_btn span:nth-of-type(3) {
+top:36px;
+}
+
+/*activeクラスが付与されると線が回転して×になり、Menu表記をしている2つ目の要素が透過して消える*/
+.open_btn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.open_btn.active span:nth-of-type(2) {
+opacity: 0;
+}
+
+.open_btn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+/* ハンバーガーボタンここまで */
+
+/* header_menu end */
+
+/* ドロワー */
+
+.g_nav {
+    letter-spacing: 1.25rem;
+    padding: 50px;
+    width: 312px;
+    height: 100%;
+    transition: all 0.2s;
+    transform: translate(312px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    background-color: rgb(0, 0, 0);
+}
+.g_nav.open {
+transform: translate(0);
+
+}
+
+.g_nav ul li a{
+    color: #c09932;
+    font-size: 1.25rem;
+}
+
+
+/* ドロワーメニューここまで */
+
+
+
+
+
+
+
+
+/* 共通要素ここまで */
+
+
+
+
+/* video */
+.video{
+    width: 100%;
+    height: auto;
+    background: url(../images/photos/opening.jpg) no-repeat center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 57, 75, .3);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+
+/* ------------header end ------------ */
+
+/* main */
+#main_wrapper{
+    margin-top: 200px;
+    background-color: #000000;
+    padding-bottom: 67px;
+}
+
+.breadcrumb{
+    margin: 30px 60px;
+}
+
+#main_wrapper .more_read_btn{
+    text-align: right;   
+}
+
+.more_read_btn p{
+    box-sizing: border-box;
+    display: block;
+
+}
+
+.more_read_btn a{
+    color: #f5f5f5;
+    border: 1px solid #c09932;
+    padding: 10px;
+    font-style: italic;
+    letter-spacing: 0.5rem;
+    transition: all 0.8s;
+}
+
+
+/* hover時に色を反転 */
+.more_read_btn a:hover{
+    color: #f5f5f5;
+    background-color: #c09932;
+    padding: 10px;
+    transition: all .5s;
+}
+
+
+.title>h2{
+    border-bottom: 1px solid #c09932;
+    box-sizing: border-box;
+}
+
+.breadcrumb a{
+    color: #fff;
+    display: inline-block;
+}
+
+.breadcrumb span{
+    margin: 0 3px;
+    font-size: 0.9rem;
+}
+
+
+
+/* to_top */
+
+.to_top{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    transition: 0.3s;
+    position: fixed;
+    right: -10px;
+    bottom: 10px;
+}
+/*このクラスが付与されると表示する*/
+
+
+.absolute{
+    position: absolute;
+    bottom: auto;
+    z-index: 1000;
+}
+
+/*------------ to_top end ------------*/
+
+
+/* reserve_btn */
+.reserve_btn,
+.m_reserve_btn{
+    display: block;
+    box-sizing: border-box;
+
+}
+
+.m_reserve_btn a{
+    color: #fff;
+    background-color: #bd9323;
+    padding: 20px 160px;
+}
+
+/* .m_reserve_btn{
+    margin-bottom: 80px;
+} */
+
+
+/* hover時に色が反転 */
+
+/* ------------reserve_btn end ------------*/
+
+
+
+
+/* footer */
+
+
+footer{
+    background-image: url(../images/common/footer_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    z-index: 99;
+    padding: 15px 160px 30px;
+}
+
+.f_info{
+    align-items: center;
+}
+
+.f_title{
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 5px;
+
+}
+
+.f_about a,
+.f_chess a,
+.f_menu a,
+.f_news a,
+.f_event a,
+.f_price a,
+.f_access a,
+.f_qa a{
+    color: #ffffff;
+    font-size: 0.75rem;
+    text-shadow: #000000;
+    text-decoration: underline #f3f3f3;
+}
+
+.twitter,
+.insta{
+    margin: 0 15px;
+}
+
+.sns img{
+    width: 50px;
+}
+
+
+/* -------------------------------------------------------- */
+
+
+@media screen and (max-width:480px){ 
+	/*画面幅が480px以下になったら適用*/
+
+
+
+    /* 4, widthの調整（解除） */
+
+
+     /* 4, widthの調整（解除） */
+
+     /* 5.余白の取り直し */
+
+    .wrapper{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+	.inner{
+		width:auto;
+        margin-left: auto;
+        margin-right: auto;
+	}
+
+
+    img{
+        width: 100%; 
+        height: auto;
+    }
+
+
+
+    .ds_f{
+        flex-direction: column;
+        justify-content: center;
+        /* 縦並びになる */
+    }
+
+
+
+
+
+
+    header {
+        position: relative;
+        height: 1vh;
+    }
+
+    body{
+        background-color: #000000;
+        width: 100%;
+        font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+        color: #c5c2c2;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.6rem;
+    }
+    h2,h3,a{
+        color: #c5c5c5;
+    }
+    
+    
+    nav{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    
+    
+
+    .jc_sb,
+    .jc_sa,
+    .jc_c{
+        justify-content: center;
+    }
+
+    .tx_c{
+        text-align: center;
+    }
+    
+    .ai_c{
+        align-items: center;
+    }
+    
+    .h_logo {
+        width: 150px;
+        height: auto;
+
+    }
+
+    
+    .f_logo{
+        width: 250px;
+        margin: auto;
+        padding: auto;
+        
+    }
+    
+    p{
+        font-size: 1rem;
+        text-shadow: #303030;
+    }
+    
+    
+    h2{
+        font-size: 2rem; /*(36px)*/
+        letter-spacing: 1rem;
+        margin-bottom: 30px;
+        
+    }
+    
+    
+    
+    
+    /* header_menu */
+        /* ハンバーガーメニュー */
+    
+    
+        /* test */
+
+    #header_wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+
+    .header_wrapper .fix {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 30000;
+        width: 100%;
+    }
+
+
+
+    header h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #c5c5c5;
+    letter-spacing: 6px;
+    text-shadow: 0 0 10px #333;
+    
+    }
+    
+    
+
+        
+    
+    
+    .menu_btn{
+        display: block;
+        padding: 30px;
+        width: 100px;
+
+    }
+
+    .open_btn{
+    
+        position: relative;/*ボタン内側の基点*/
+        background:#c09932;
+        cursor: pointer;
+        width: 50px;
+        height:50px;
+        border-radius: 5px;
+        z-index: 3000;
+    }
+    
+    .open_btn span{
+        display: inline-block;
+        transition: all 400ms;/*アニメーションの設定*/
+        position: absolute;
+    }
+    
+    
+    /*  上の棒 */
+    .open_btn span:nth-of-type(1),
+    /*  下の棒 */
+    .open_btn span:nth-of-type(3) {
+        height: 2px;
+        background-color: #fff;
+        width: 62%;
+        left: 10px;
+    }
+    
+    .open_btn span:nth-of-type(1) {
+    top:13px; 
+    }
+    /* 「Menu」部分 */
+    .open_btn span:nth-of-type(2) {
+    top:18px;
+    left:11px;
+    font-size:0.6rem;
+    text-transform: uppercase;
+    color: #fff;
+    }
+    
+    .open_btn span:nth-of-type(3) {
+    top:36px;
+    }
+    
+    /*activeクラスが付与されると線が回転して×になり、Menu表記をしている2つ目の要素が透過して消える*/
+    .open_btn.active span:nth-of-type(1) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+    
+    .open_btn.active span:nth-of-type(2) {
+    opacity: 0;
+    }
+    
+    .open_btn.active span:nth-of-type(3){
+        top: 30px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
+    }
+    
+    /* ハンバーガーボタンここまで */
+    
+    /* header_menu end */
+    
+    /* ドロワー */
+    
+    .g_nav {
+        letter-spacing: .75rem;
+        padding: 50px;
+
+        width: 100vw;
+        height: 100%;
+        transition: all 0.2s;
+        transform: translate(100vw);
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        background-color: rgb(0, 0, 0);
+    }
+    .g_nav.open {
+    transform: translate(0);
+    }
+    
+
+    .g_nav li{
+        margin: 30px;
+        font-size: 1rem;
+        
+    }
+
+    .g_nav ul li a{
+        color: #c09932;
+    }
+    
+    
+    /* ドロワーメニューここまで */
+    
+    
+    
+    #fixed_header {
+        flex-direction: row;
+        position: fixed;
+        top: -130px;  
+        width: 100%;
+        height: 100px;
+        font-size: 2em;
+        text-align: center;
+        color: #fff;
+        background: rgba(0, 0, 0, .7);
+        box-sizing: border-box;
+        transition: .3s; /* アニメーションタイミング */
+    }
+    #fixed_header.is-show {
+    top: 0;
+    z-index: 50;
+    }
+    
+    
+    
+    
+    
+    /* 共通要素ここまで */
+    
+    
+    
+    /* ------------header end ------------ */
+    
+    /* main */
+    #main_wrapper{
+        margin-top: 200px;
+        background-color: #000000;
+        padding-bottom: 67px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .breadcrumb{
+        margin: 30px 60px;
+    }
+    
+    
+    .breadcrumb a{
+        color: #fff;
+        display: inline-block;
+    }
+    
+    .breadcrumb span{
+        margin: 0 3px;
+        font-size: 0.9rem;
+    }
+    
+    
+    /* main_visual */
+    
+    
+    
+    .reserve_btn{
+        position: absolute;
+        bottom: 215px;
+        right: 40px;
+    }
+    
+    
+    .reserve_btn a {
+        color: #fff;
+        background-color: #c09932;
+        padding: 20px 150px;
+    } 
+    
+    /* main_visual end */
+
+    
+    /* to_top */
+    
+    .to_top{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+        transition: 0.3s;
+        position: fixed;
+        right: -10px;
+        bottom: 10px;
+    }
+    /*このクラスが付与されると表示する*/
+    
+    
+    .absolute{
+        position: absolute;
+        bottom: auto;
+        z-index: 1000;
+    }
+    
+    /*------------ to_top end ------------*/
+    
+    
+    /* reserve_btn */
+    .reserve_btn,
+    .m_reserve_btn{
+        display: block;
+        box-sizing: border-box;
+    
+    }
+    
+    .m_reserve_btn a {
+        color: #fff;
+        background-color: #bd9323;
+        padding: 20px 58px;
+    }
+    
+    .m_reserve_btn{
+        margin-bottom: 80px;
+    } 
+    
+    
+    /* hover時に色が反転 */
+    
+    /* ------------reserve_btn end ------------*/
+    
+    
+    
+    
+    /* footer */
+    
+    
+    footer{
+        background-image: url(../images/photos/chessboard_coffee.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto;
+        z-index: 99;
+        padding: 15px 10px ;
+        text-align: center;
+    
+    }
+
+    .sns{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .twitter,
+    .insta{
+        margin: 0 15px;
+    }
+
+    .sns img{
+        width: 50px;
+    }
+
+
+    footer>nav{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    
+    .f_title{
+        font-weight: bold;
+        font-style: normal;
+        margin-bottom: 15px;
+    }
+
+    .f_title>span{
+        font-size: 2.5rem;
+        font-weight: bold;
+        font-style: italic;
+    }
+    
+    .f_about a,
+    .f_chess a,
+    .f_menu a,
+    .f_news a,
+    .f_event a,
+    .f_price a,
+    .f_access a,
+    .f_qa a{
+        color: #ffffff;
+        font-size: 1rem;
+        text-shadow: #000000;
+    }
+
+    
+
+    .f_info .tel p,
+    .f_info .email p{
+        font-size: 2rem;
+    }
+
+    
+
+	
+	/*レスポンシブデザインここまで*/
+}

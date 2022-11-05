@@ -1,0 +1,234 @@
+@charset "UTF-8";
+
+
+
+
+
+
+/* common */
+
+
+
+body{
+    background-color: #000000;
+    width: 100%;
+    font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+    color: #f5f5f5;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+nav{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3{
+    font-size: 1.25rem;
+}
+
+
+
+.inner{
+    width: 960px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.ds_f{
+    display: flex;
+}
+
+.jc_sb{
+    justify-content: space-between;
+}
+
+.jc_sa{
+    justify-content: space-around;
+}
+
+.jc_c{
+    justify-content: center;
+}
+
+.tx_c{
+    text-align: center;
+}
+
+.ai_c{
+    align-items: center;
+}
+
+.h_logo{
+    width: 200px;
+    height: auto;
+}
+
+.f_logo{
+    width: 250px;
+    margin: auto;
+    padding: auto;
+    
+}
+
+p{
+    font-size: 1rem;
+    text-shadow: #303030;
+}
+
+
+h2{
+    font-size: 2rem; /*(36px)*/
+    letter-spacing: 2rem;
+    margin-bottom: 50px;
+    
+}
+
+
+
+
+/* header_menu */
+    /* ハンバーガーメニュー */
+
+
+    /* test */
+header{
+    position: relative;
+    height: 10vh;
+}
+
+
+#board{
+width: 400px;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+
+
+
+.inner{
+    width: 960px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+.reset_txt{
+    margin: 50px 0;
+}
+
+.cpu_sp_txt,
+.chess_back_btn{
+    display: none;
+}
+
+
+
+.breadcrumb{
+    margin: 30px 60px;
+}
+
+
+
+
+.cpu_match_btn,
+.chess_back_btn{
+    margin: 50px;
+}
+
+.cpu_match_btn a
+,.chess_back_btn a{
+    color: #f5f5f5;
+    border: 1px solid #c09932;
+    padding: 10px;
+    font-style: italic;
+    letter-spacing: 0.5rem;
+    transition: all 0.8s;
+}
+
+
+/* hover時に色を反転 */
+.cpu_match_btn a:hover{
+    color: #f5f5f5;
+    background-color: #c09932;
+    padding: 10px;
+    transition: all .5s;
+}
+
+
+
+/* --------------------------------------------------- */
+@media screen and (max-width:480px){ 
+	/*画面幅が480px以下になったら適用*/
+
+
+
+    /* 4, widthの調整（解除） */
+
+
+     /* 4, widthの調整（解除） */
+
+     /* 5.余白の取り直し */
+
+
+
+    .breadcrumb {
+    margin: 10px 60px;
+    }
+
+
+
+    header {
+        position: relative;
+        height: 10vh;
+    }
+
+    /* ------------header end ------------ */
+    
+    /* main */
+    #main_wrapper{
+        margin-top: 50px;
+        background-color: #000000;
+        padding-bottom: 67px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h2 {
+        font-size: 2rem;
+        letter-spacing: .75rem;
+        margin-bottom: 30px;
+    }
+
+    #fixed_header{
+        display: none;
+    }
+
+    .cpu_sp_txt,
+    .chess_back_btn{
+        display: block;
+    }
+
+    .reset_txt,
+    #board,
+    .cpu_match_btn{
+        display: none;
+    }
+
+
+
+
+	/*レスポンシブデザインここまで*/
+}
+
+
+
+

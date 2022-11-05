@@ -1,0 +1,288 @@
+@charset "UTF-8";
+
+
+header{
+    position: relative;
+    height: 30vh;
+}
+
+
+/* main */
+#main_wrapper{
+    margin-top: 100px;
+    background-color: #000000;
+    padding-bottom: 67px;
+}
+
+
+/* chess */
+#chess{
+
+    height: auto;
+    margin-bottom: 100px;
+    height: 100%;
+
+}
+
+/* #chess p{
+    display: block;
+    margin: 30px 0;
+    font-size: 1.5rem;
+    line-height: 4.5rem;
+    letter-spacing: 0.25rem;
+} */
+
+.title h3{
+    letter-spacing: .75rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.title{
+    margin: 50px 0;
+}
+
+.what_chess p,
+.history_chess p{
+    line-height: 2.5rem
+    ;
+}
+
+.what_chess p{
+    font-size: 1rem;
+}
+
+.what_chess{
+    margin-bottom: 100px;
+}
+
+.what_chess img,
+.history_chess img{
+    width: 1000px;
+}
+
+.w_c_txt01,
+.w_c_txt02,
+.c_h_txt01,
+.c_h_txt02{
+    margin-left: 50px;
+    padding:  0 30px;
+    width: 1000px;
+}
+
+
+.c_h_img01 img,
+.c_h_img02 img{
+    width: 1000px;
+}
+
+
+.w_c_01,
+.c_h_01{
+    margin-bottom: 50px;
+}
+
+.c_rule_img{
+    text-align: center;
+    margin: 50px 0; 
+}
+
+.c_rule_img img{
+    width: 300px;
+
+}
+
+.piece_moves{
+    margin-top: 80px;
+}
+
+#pieces h3{
+    text-align: center;
+    text-decoration: underline #bd9323;
+}
+
+.piece{
+    margin-bottom: 60px;
+    padding: 20px;
+    border: 1px solid #fff;
+
+}
+
+.piece p{
+    font-size: 1.25rem;
+}
+
+.piece img{
+    cursor: pointer;
+}
+
+/* modal */
+#graydisplay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+}
+#graydisplay img {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+max-width: 90%;
+max-height: 90%;
+}
+/* /modal */
+
+
+
+.feature_contents{
+    text-align: left;
+    padding: 50px;
+}
+
+.feature_contents li {
+    text-decoration: dotted;
+    margin-bottom: 30px;
+
+}
+
+.cpu{
+    letter-spacing: 0.5rem;
+    padding: 30px;
+}
+
+.cpu_match_btn{
+    margin: 50px;
+}
+
+.cpu_match_btn a{
+    color: #f5f5f5;
+    border: 1px solid #c09932;
+    padding: 10px;
+    font-style: italic;
+    letter-spacing: 0.5rem;
+    transition: all 0.8s;
+}
+
+
+/* hover時に色を反転 */
+.cpu_match_btn a:hover{
+    color: #f5f5f5;
+    background-color: #c09932;
+    padding: 10px;
+    transition: all .5s;
+}
+
+
+/* --------------chess end ------------*/
+
+
+
+
+
+
+/* reserve_btn */
+.reserve_btn,
+.m_reserve_btn{
+    display: block;
+    box-sizing: border-box;
+
+}
+
+.m_reserve_btn a{
+    color: #fff;
+    background-color: #bd9323;
+    padding: 20px 160px;
+}
+
+
+/* --------------------------------------------------- */
+@media screen and (max-width:480px){ 
+	/*画面幅が480px以下になったら適用*/
+
+
+
+    /* 4, widthの調整（解除） */
+
+
+     /* 4, widthの調整（解除） */
+
+     /* 5.余白の取り直し */
+
+
+
+
+
+    header {
+        position: relative;
+        height: 10vh;
+    }
+
+    /* ------------header end ------------ */
+    
+    /* main */
+    #main_wrapper{
+        margin-top: 80px;
+        background-color: #000000;
+        padding-bottom: 67px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h2 {
+        font-size: 2rem;
+        letter-spacing: .75rem;
+        margin-bottom: 30px;
+    }
+    
+    #chess {
+        height: auto;
+        margin-bottom: 50px;
+        height: 100%;
+        padding: 10px;
+    }
+
+
+
+
+    .w_c_txt01, .w_c_txt02, .c_h_txt01, .c_h_txt02 {
+        margin: 0;
+        padding: 30px 10px;
+        width: 100%;
+    }
+
+    .feature_contents {
+        text-align: left;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    #pieces{
+        text-align: center;
+    }
+
+    .cpu h3 {
+        font-size: 1rem;
+        letter-spacing: 0.25rem;
+    }
+
+
+    .m_reserve_btn a {
+        color: #fff;
+        background-color: #bd9323;
+        padding: 30px 80px;
+    }
+
+
+
+	/*レスポンシブデザインここまで*/
+}
+
+
+

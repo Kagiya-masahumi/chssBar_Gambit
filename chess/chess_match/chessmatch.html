@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayRoom_Gambit</title>
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/chessmatch.css">
+    <link rel="stylesheet" href="../../assets/css/chessboard-1.0.0.min.css">
+    <link rel="icon" href="../../favicon.ico"/>
+    
+
+
+    <script src="../../assets/js/jquery-3.6.1.min.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script src="../../assets/js/chessboard-1.0.0.min.js"></script>
+    <script src="../../assets/js/chessmatch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.2/chess.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div id="header_wrapper" class="ds_f jc_sb">
+                <div class="h_logo">
+                    <p><a href="../../index.html"><img src="../../assets/images/logo/Gambit_logo_l.svg"
+                                alt="ギャンビットのロゴ"></a>
+                    </p>
+                </div>
+
+                <div class="menu_btn">
+
+                    <div class="open_btn"><span></span><span>Menu</span><span></span>
+                    </div>
+                    <div class="nav_list">
+                        <nav class="g_nav">
+                            <ul>
+                                <li><a href="../../about/index.html">ABOUT</a></li>
+                                <li><a href="../../chess/index.html">CHESS</a></li>
+                                <li><a href="../../menu/index.html">MENU</a></li>
+                                <li><a href="../../news/index.html">NEWS</a></li>
+                                <li><a href="../../price/index.html">PRICE</a></li>
+                                <li><a href="../../event/index.html">EVENT</a></li>
+                                <li><a href="../../access/index.html">ACCESS</a></li>
+                                <li><a href="../../qa/index.html">QA</a></li>
+                            </ul>
+
+                        </nav>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div id="fixed_header" class="ds_f jc_sb">
+                <div class="h_logo">
+                    <p><a href="../../index.html"><img src="../../assets/images/logo/Gambit_logo_w.svg" alt="ギャンビットのロゴ"></a></p>
+                </div>
+
+                <div class="menu_btn">
+
+                    <div class="open_btn"><span></span><span>Menu</span><span></span>
+                    </div>
+                    <div class="nav_list">
+                        <nav class="g_nav">
+                            <ul>
+                                <li><a href="../../about/index.html">ABOUT</a></li>
+                                <li><a href="../../chess/index.html">CHESS</a></li>
+                                <li><a href="../../menu/index.html">MENU</a></li>
+                                <li><a href="../../news/index.html">NEWS</a></li>
+                                <li><a href="../../price/index.html">PRICE</a></li>
+                                <li><a href="../../event/index.html">EVENT</a></li>
+                                <li><a href="../../access/index.html">ACCESS</a></li>
+                                <li><a href="../../qa/index.html">QA</a></li>
+                            </ul>
+
+                        </nav>
+
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </header>
+        <main>
+            <div id="main_wrapper" class=" inner">
+                <p class="breadcrumb"><a href="../../index.html"> HOME</a> <span> &gt;</span><span><a
+                            href="../index.html">CHESS</a></span><span> &gt;</span><span>Playing
+                    </span>
+                </p>
+                <div class="title tx_c">
+                    <h2>CPU対戦</h2>
+                </div>
+                <div class="reset_txt tx_c">
+                    <p>※やり直したい場合は、リロードをするか、もう一度入りなおしてください</p>
+                </div>
+                <div class="cpu_sp_txt tx_c">
+                    ※申し訳ありません。<br>このゲームは現在PCでのみの対応となります。
+                </div>
+                
+
+
+                <div id="board"></div>
+                <script src="js/game.js"></script>
+
+                <div class="cpu_match_btn tx_c">
+                    <p><a href="chessmatch.html">やり直す</a></p>
+                </div>
+
+                <div class="chess_back_btn tx_c">
+                    <p><a href="../index.html">ひとつ前に戻る</a></p>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+        </main>
+
+        <footer>
+            <div id="footer_wrapper" class="inner">
+                <div class="sns ds_f jc_c">
+                    <div class="insta ds_f">
+                        <p><a href="#"><img src="../../assets/images/SNS/Instagram_Glyph_Gradient_RGB.png" alt="インスタグラムのアイコン"></a></p>
+                    </div>
+                    <div class="twitter">
+                        <p><a href="#"><img src="../../assets/images/SNS/2021_Twitter_logo_blue.png" alt="ツイッターのアイコン"></a></p>
+                    </div>
+                </div>
+                <div class="f_nav">
+                    <nav>
+                        <ul class="ds_f jc_sb">
+                            <li class="f_title"><span>about</span>
+                                <ul class="f_about">
+                                    <li><a href="../../about/index.html">Gambitについて</a></li>
+                                    <li><a href="../../about/gallery/gallery.html">ギャラリー</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="f_title"><span>chess</span>
+                                <ul class="f_chess">
+                                    <li><a href="../../chess/index.html#c_rule">チェスのルール</a></li>
+                                    <li><a href="../../chess/index.html#c_history">チェスの歴史</a></li>
+                                    <li><a href="../../chess/chess_match/chessmatch.html">CPU対戦</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li class="f_title"><span>menu</span>
+                                <ul class="f_menu">
+                                    <li><a href="../../menu/index.html#m_food">フードメニュー</a></li>
+                                    <li><a href="../../menu/index.html#m_drink">アルコール</a></li>
+                                    <li><a href="../../menu/index.html#m_a_drink">ノンアルコール</a></li>
+                                </ul>
+                            </li>
+
+
+
+                            <li class="f_title"><span>news</span>
+                                <ul class="f_news">
+                                    <li><a href="../../news/index.html">お知らせ</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li class="f_title"><span>event</span>
+                                <ul class="f_event">
+                                    <li><a href="../../event/index.html">イベント告知</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="f_title"><span>price</span>
+                                <ul class="f_price">
+                                    <li><a href="../../price/index.html">料金システム</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li class="f_title"><span>access</span>
+                                <ul class="f_access">
+                                    <li><a href="../../access/index.html">アクセスマップ</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="f_title"><span>Q&A</span>
+                                <ul class="f_qa">
+                                    <li><a href="../../qa/index.html">よくある質問</a></li>
+                                    <li><a href="../../event/event_form/event_form.html">予約ページ</a></li>
+                                    <li><a href="../../qa/contact/contact.html">お問い合わせ</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                
+
+                <div class="f_info ds_f jc_sb inner">
+                    <div class="f_left">
+                        <address>
+                            <div class="tel">
+                                <p>Tel:03-0000-0000</p>
+                            </div>
+                            <div class="email">
+                                <p>E-mail:gambit@com</p>
+                            </div>
+                        </address>
+                    </div>
+
+                    <div class="f_logo tx_c">
+                        <p><a href="../../index.html"><img src="../../assets/images/logo/Gambit_logo_l.svg"
+                                    alt="ギャンビットのロゴ"></a>
+                        </p>
+                    </div>
+
+
+                    <div class="f_right">
+                        <small>&copy;Copyright</small>
+                        <p>Blue Gene Co., Ltd</p>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+        </footer>
+
+    </div>
+
+
+</body>
+
+
+
+</html>

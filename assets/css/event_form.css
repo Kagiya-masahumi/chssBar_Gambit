@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+header {
+    height: 30vh
+}
+#main_wrapper {
+margin-top: 5px;
+background-color: #000000;
+padding-bottom: 67px;
+}
+
+.breadcrumb a{
+    color: #fff;
+}
+
+.breadcrumb> span{
+    margin: 0 3px;
+    font-size: 0.75rem;
+}
+
+
+
+form{
+    padding: 0 150px;
+}
+
+.form_contents{
+    padding: 30px;
+    text-align: center;
+    display: flex;
+}
+
+label{
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+/* text */
+
+
+
+.selectdiv,
+.date_time,
+.name,
+.email,
+.tel,
+.message{
+  margin-bottom: 50px;
+}
+
+.form_input {
+    height: 2.4em;
+    width: 100%;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #c09932 inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.form_input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px #c09932 inset;
+}
+
+
+/* textarea */
+
+
+.form_item_textarea textarea {
+    height: 300px;
+}
+
+.form_textarea {
+    display: block;
+    width: 100%;
+    padding: 4px 16px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #c09932 inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    resize: vertical;
+    resize: none;
+}
+
+.form_textarea:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px #c09932 inset;
+}
+.protocol{
+    margin: 50px;
+    line-height: 1rem;
+    
+
+}
+
+
+.protocol>p>a{
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* submit */
+
+.form_submit {
+    display: inline-block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    appearance: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.form_submit:hover {
+    background-color: #484848;
+}
+
+.form_submit{
+    outline: 0;
+    background-color: #414040;
+    border: 2px solid #c09932;
+}
+
+.alert {
+    color: #ED220C;
+    font-size: 0.75rem;
+    margin: 5px 0;
+}
+
+.protocol{
+    align-items: center;
+}
+
+
+
+select{
+    position: relative;
+    width: 100%;
+    appearance: none;
+    background-color: #fff;
+}
+.select_wrapper {
+    position: relative;
+    width: 480px;
+}
+
+.selectdiv {
+    position: relative;
+    
+    margin: 50px 0;
+}
+
+
+.selectdiv:after {
+    content: '>';
+    color: #fff;
+    transform: rotate(90deg);
+    right: 10px;
+    top: 10px;
+    padding: 0 0 2px;
+    border-bottom: 1px solid #fff;
+    position: absolute;
+    pointer-events: none;
+}
+
+.selectdiv select {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: 5px 0px;
+    padding: 0px 24px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #fff;
+    background-color: #050505;
+    background-image: none;
+    border: 1px solid #c09932;
+}
+
+.date_time{
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date_time>label{
+    margin-right: 30px;
+}
+
+.date_time>input{
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #c09932;
+    width: 300px;
+    height: 80px;
+    font-size: 1.5rem;
+}
+
+.date_time:after {
+    position: absolute;
+    content: '>';
+    color: #fff;
+    transform: rotate(90deg);
+    right: 30%;
+    top: 33%;
+    padding: 0 0 2px;
+    pointer-events: none;
+}
+
+.f_info>address .tel{
+    margin-bottom: 5px;
+}
+
+/* -------------------------------------------------------- */
+
+
+@media screen and (max-width:480px){ 
+	/*画面幅が480px以下になったら適用*/
+
+
+    header {
+        position: relative;
+        height: 10vh;
+    }
+
+    
+    /* main */
+    #main_wrapper{
+        margin-top: 80px;
+        background-color: #000000;
+        padding-bottom: 67px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    form {
+        padding: 0 20px;
+    }
+    
+    .protocol{
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+    .date_time>input {
+        background-color: #000;
+        color: #fff;
+        border: 1px solid #c09932;
+        width: 100%;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+
+    .date_time:after {
+        position: absolute;
+        content: '>';
+        color: #fff;
+        transform: rotate(90deg);
+        right: 2%;
+        top: 59px;
+        padding: 0 0 2px;
+        pointer-events: none;
+    }
+
+    .select_wrapper {
+        position: relative;
+        width: 100%;
+    }
+    
+    /* main_visual */
+    
+	/*レスポンシブデザインここまで*/
+}
+

@@ -1,0 +1,906 @@
+@charset "UTF-8";
+
+
+
+
+
+
+/* 共通要素ここまで */
+
+h2>a{
+    color: #f5f5f5;
+}
+
+
+/* video */
+
+.video_area{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    }
+.video{
+    width: 100%;
+    height: auto;
+    background: url(../images/top/Gambit_m_640x360_1.mp4) no-repeat center/cover;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 177.77777778vw;
+    /* height: 56.25vh; */
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.video::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 57, 75, .3);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+
+
+/*スクロールダウン全体の場所*/
+.scrolldown {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    /*全体の高さ*/
+    height: 50px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown span {
+    /*描画位置*/
+    position: absolute;
+    left: -17px;
+    top: -17px;
+
+    color: #f5f5f5;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
+
+/* 線の描写 */
+.scrolldown::after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    top: 0;
+    /*線の形状*/
+    width: 1px;
+    height: 30px;
+    background: #f5f5f5;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+    animation: pathmove 1.4s ease-in-out infinite;
+    opacity: 0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove {
+    0% {
+        height: 0;
+        top: 0;
+        opacity: 0;
+    }
+    30% {
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        height: 0;
+        top: 50px;
+        opacity: 0;
+    }
+}
+
+
+
+header h1{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: #fff;
+letter-spacing: 6px;
+text-shadow: 0 0 10px #333;
+
+}
+
+
+
+
+/* ------------header end ------------ */
+
+/* main */
+#main_wrapper{
+    margin-top: 300px;
+    background-color: #000000;
+    padding-bottom: 67px;
+}
+
+#main_wrapper .more_read_btn{
+    text-align: right;   
+}
+
+.more_read_btn p{
+    box-sizing: border-box;
+    display: block;
+
+}
+
+.more_read_btn a{
+    color: #f5f5f5;
+    border: 1px solid #c09932;
+    padding: 10px;
+    font-style: italic;
+    letter-spacing: 0.5rem;
+    transition: all 0.8s;
+}
+
+
+/* hover時に色を反転 */
+.more_read_btn a:hover{
+    color: #f5f5f5;
+    background-color: #c09932;
+    padding: 10px;
+    transition: all .5s;
+}
+
+.title>h2{
+    border-bottom: 1px solid #c09932;
+    box-sizing: border-box;
+}
+
+
+
+/* main_visual */
+
+#header_wrapper{
+    position: relative;
+}
+
+
+
+.reserve_btn{
+    position: absolute;
+    bottom: 258px;
+    right: 40px;
+}
+
+
+.reserve_btn a {
+    color: #fff;
+    background-color: #c09932;
+    padding: 20px 150px;
+}
+
+/* main_visual end */
+
+
+/* about */
+
+#about{
+    margin-bottom: 100px;
+    height: 100%;
+    padding: 100px 0;
+}
+
+#about h2{
+    font-size: 1.5rem; /*(24px)*/
+    letter-spacing: 2rem;
+    margin-bottom: 50px;
+
+}
+
+
+
+/*------------ about end ------------*/
+
+
+/* chess */
+#chess{
+    background-image: url(../images/top/what_chess_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    margin-bottom: 100px;
+    height: 100%;
+    padding: 80px;
+}
+
+#chess p{
+    display: block;
+    margin: 30px 0;
+}
+
+
+/* --------------chess end ------------*/
+
+
+
+/* news */
+
+#news{
+    margin-bottom: 100px;
+    height: 100%;
+    padding: 100px 0;
+}
+
+
+#news h2{
+    font-size: 1.5rem; /*(24px)*/
+    letter-spacing: 2rem;
+    margin-bottom: 50px;
+}
+
+#news>dl{
+    margin-left: 100px;
+
+}
+
+#news>dl{
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#news>dt {
+    width: 30%;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+#news>dd {
+    width: 70%;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+#news dl dt{
+    margin-right: 0.5em ;
+	width: 120px ;
+    margin-bottom: 30px;
+}
+
+
+.date_news dd{
+    margin-left: 30px;
+    letter-spacing: 0.25rem;
+
+}
+
+
+/*------------ news end------------ */
+
+/* menu */
+
+
+#menu{
+    text-align: center;
+}
+
+#menu h3{
+    font-size: 1.5rem; /*(24px)*/
+    margin: 30px;
+}
+
+#m_drink{
+    margin-bottom: 80px;
+}
+
+.card{
+    padding: 15px;
+}
+
+
+.to_menu_btn{
+    display: block;
+    text-align: center;
+    margin: 30px 0 100px;
+}
+
+
+.to_menu_btn a{
+    
+    padding: 20px 160px;
+    border: 1px solid #c09932;
+    color: #f5f5f5;
+}
+
+/*------------ menu end ------------ */
+
+
+
+
+
+/* price */
+
+dl{
+    width: 960px;
+    line-height: 1.5rem;
+}
+
+dt {
+    margin-right: 60px;
+    width: 55%;
+}
+
+dd{
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+
+
+#price{
+    background-image: url(../images/top/top_price_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    padding: 80px 0;
+;
+}
+
+
+
+
+.to_price_btn{
+    display: block;
+    text-align: center;
+    margin: 100px 0 100px;
+}
+
+
+.to_price_btn a{
+    font-style: italic;
+    padding: 30px 160px;
+    border: 1px solid #c09932;
+    color: #f5f5f5;
+}
+
+.p_table>dl{
+    display: inline-block;
+    font-size: 3rem;
+    padding: 50px 100px 5px;
+}
+
+.weekday{
+    margin-bottom: 50px;
+}
+
+.p_table>.weekday>dt {
+    width: 50%;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+
+}
+
+.p_table>dd {
+    width: 40%;
+    margin-left: 50px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+
+#price> p{
+
+    margin: 30px 0;
+}
+
+/*------------ price end------------ */
+
+
+/* event */
+
+#event{
+    margin-bottom: 200px;
+    padding: 60px;
+
+}
+
+
+#event .e_contents p{
+    margin: 15px;
+    width: 300px;
+
+}
+
+
+/* ------------event end------------ */
+
+/* access */
+
+#access{
+    margin-bottom: 200px;
+}
+
+.map_contents>a{
+    color: #f5f5f5;
+}
+
+iframe{
+    max-width: 100%;
+}
+
+/*------------ access end ------------ */
+
+
+/* to_top */
+
+.to_top{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    transition: 0.3s;
+    position: fixed;
+    right: -10px;
+    bottom: 10px;
+}
+/*このクラスが付与されると表示する*/
+
+
+.absolute{
+    position: absolute;
+    bottom: auto;
+    z-index: 1000;
+}
+
+/*------------ to_top end ------------*/
+
+
+/* reserve_btn */
+.reserve_btn,
+.m_reserve_btn{
+    display: block;
+    box-sizing: border-box;
+
+}
+
+.m_reserve_btn a{
+    color: #fff;
+    background-color: #c09932;
+    padding: 20px 160px;
+}
+
+/* .m_reserve_btn{
+    margin-bottom: 80px;
+} */
+
+
+/* hover時に色が反転 */
+
+/* ------------reserve_btn end ------------*/
+
+
+
+
+
+
+
+/* --------------------------------------------------------------- */
+@media screen and (max-width:480px){ 
+	/*画面幅が480px以下になったら適用*/
+
+    
+    /* video */
+
+    .video_area {
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        overflow: hidden;
+        max-width: 100%;
+    }
+    .video{
+        background: rgb(0, 0, 0);
+        position: absolute;
+        top: 200px;
+        left: 250px;
+        overflow: hidden;
+        z-index: -1;
+
+        -o-object-fit: cover;
+        object-fit: contain;
+        position: absolute;
+        height: 100vh;
+        max-width: 100%;
+    }
+
+    
+    .video::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(16, 57, 75, .3);
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    
+    
+    /* ------------header end ------------ */
+    
+    
+    #main_wrapper .more_read_btn{
+        text-align: center;   
+    }
+    
+    .more_read_btn p{
+        box-sizing: border-box;
+        display: block;
+    
+    }
+    
+    .more_read_btn a{
+        color: #f5f5f5;
+        border: 1px solid #c09932;
+        padding: 10px;
+        font-style: italic;
+        letter-spacing: 0.5rem;
+        transition: all 0.8s;
+    }
+    
+    
+    /* hover時に色を反転 */
+    .more_read_btn a:hover{
+        color: #f5f5f5;
+        background-color: #c09932;
+        padding: 10px;
+        transition: all .5s;
+    }
+    
+    
+    .title>h2{
+        border-bottom: 1px solid #c09932;
+        box-sizing: border-box;
+    }
+    
+    
+    
+    
+    /* main_visual */
+    
+    
+    
+    .reserve_btn{
+        position: absolute;
+        bottom: -315px;
+        right: calc(100% / 4);
+
+    }
+
+
+    
+    
+    .reserve_btn a {
+        color: #fff;
+        background-color: #c09932;
+        padding: 6px 23px;
+        letter-spacing: 0.25rem;
+    }
+    
+    /* main_visual end */
+    
+    
+    /* about */
+    
+    #about{
+        margin-bottom: 100px;
+        height: 100%;
+        padding: 30px ;
+        margin-top: 50px;
+    }
+    
+    #about h2, 
+    #chess h2,
+    #news h2,
+    #menu h2,
+    #event h2,
+    #price h2,
+    #access h2 {
+        font-size: 1.5rem;
+        letter-spacing: 1rem;
+        margin-bottom: 50px;
+    }
+    
+    #about>p,
+    #chess>p {
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+        margin-bottom: 30px;
+
+    }
+    
+    
+    /*------------ about end ------------*/
+    
+    
+    /* chess */
+    #chess{
+        background-image: url(../images/top/piece_antique.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto;
+        margin-bottom: 50px;
+        height: 100%;
+        padding:30px ;
+
+    }
+    
+    #chess p{
+        display: block;
+        margin: 30px 0;
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+        letter-spacing: 0.25rem;
+        text-shadow: 0px 2px 3px rgba(34,34,34,0.3);
+        margin-bottom: 30px;
+    
+    }
+    
+    
+    /* --------------chess end ------------*/
+    
+    
+    /* 
+    /* news */
+    
+    #news{
+        margin-bottom: 100px;
+        height: 100%;
+        padding: 10px ;
+    }
+    
+    
+    #news h2{
+        font-size: 1.6rem;  
+        letter-spacing: 2rem;
+        margin-bottom: 50px;
+    }
+    
+    
+    #news>dl{
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    #news>dt {
+        width: 30%;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+    }
+    
+    #news>dd {
+        width: 70%;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+        line-height: 1.5rem;
+    }
+    
+
+
+    #news .tx_c{
+        text-align: left;
+    }
+
+    .date_news{
+        margin-bottom: 30px;
+    }
+    
+    .date_news dd{
+        margin-left: 24px;
+        letter-spacing: 0.25rem;
+        width: 80%;
+    
+    }
+    
+    
+    /*------------ news end------------ */
+    
+    /* menu */
+    
+    
+    #menu{
+        text-align: center;
+    }
+    
+    #menu h3{
+        font-size: 1.5rem; /*(24px)*/
+        margin: 30px;
+    }
+    
+    #m_drink{
+        margin-bottom: 80px;
+    }
+    
+    .card{
+        padding: 15px;
+    }
+    
+    
+    .to_menu_btn{
+        display: block;
+        text-align: center;
+        margin: 30px 0 100px;
+    }
+    
+    
+    .to_menu_btn a{
+        
+        padding: 20px 160px;
+        border: 1px solid #c09932;
+        color: #f5f5f5;
+    }
+    
+    /*------------ menu end ------------ */
+    
+    /* price */
+
+    /* price */
+
+    #price dl{
+    width: 100%;
+    line-height: 1.5rem;
+    }
+
+    #price dt {
+        margin-right: 60px;
+        width: 55%;
+        margin-bottom: 30px;
+    }
+
+    #price dd{
+        width: 40%;
+        margin-bottom: 20px;
+    }
+        
+    
+    #price{
+        background-image: url(../images/top/top_price_bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto;
+        padding: 80px 0;
+        margin: 0;
+    }
+    
+    
+    
+    
+    .to_price_btn{
+        display: block;
+        text-align: center;
+        margin: 100px 0 100px;
+    }
+    
+    
+    .to_price_btn a {
+        font-style: italic;
+        padding: 20px 100px;
+        border: 1px solid #c09932;
+        color: #f5f5f5;
+    }
+    
+    .p_table>dl {
+        display: inline-block;
+        font-size: 3rem;
+        padding: 37px 20px 5px;
+    }
+    
+
+    .weekday,
+    .holiday{
+        display: flex;
+        flex-direction: row;
+    }
+    .p_table>.weekday>dt {
+    
+    
+        width: 50%;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    
+    }
+    
+    .p_table>dd {
+        width: 40%;
+        margin-left: 50px;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+    }
+    
+    
+    #price> p{
+    
+        margin: 30px 0;
+    }
+    
+    /*------------ price end------------ */
+    
+    
+    /* event */
+    
+    #event{
+        margin-bottom: 100px;
+        background-color: #303030;
+        padding: 50px 30px ;
+    }
+    
+    
+    #event .e_contents p{
+        margin: 15px;
+        width: 300px;
+
+    
+    }
+    
+    
+    /* ------------event end------------ */
+    
+    /* access */
+    
+    #access{
+        margin-bottom: 50px;
+        padding: 15px;
+    }
+    
+    .map_contents>a{
+        color: #f5f5f5;
+    }
+    
+    iframe{
+        max-width: 100%;
+    } 
+    /* 
+    ------------ access end ------------  */
+    
+    
+    
+    /* reserve_btn */
+    .reserve_btn,
+    .m_reserve_btn{
+        display: block;
+        box-sizing: border-box;
+    
+    }
+    
+    .m_reserve_btn a {
+        color: #fff;
+        background-color: #bd9323;
+        padding: 20px 58px;
+    }
+    
+    .m_reserve_btn{
+        margin-bottom: 80px;
+    } 
+    
+    
+
+    
+    /* ------------reserve_btn end ------------*/
+    
+
+}

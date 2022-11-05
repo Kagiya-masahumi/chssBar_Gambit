@@ -1,0 +1,196 @@
+@charset "UTF-8";
+
+
+header {
+  height: 30vh
+}
+#main_wrapper {
+  margin-top: 80px;
+  background-color: #000000;
+  padding-bottom: 67px;
+}
+
+.accordion-container .accordion-title {
+  position: relative;
+  margin: 0;
+  padding: 0.625em 0.625em 0.625em 2em;
+  background-color: #000;
+  font-size: 1.25em;
+  font-weight: normal;
+  color: #fff;
+  cursor: pointer;
+}
+.accordion-container .accordion-title:hover,
+.accordion-container .accordion-title:active,
+.accordion-title.open { 
+  background-color: #c09932;
+}
+
+.accordion-content{
+  padding: 30px;
+}
+
+
+
+
+/* +ボタンの挙動 */
+
+.accordion-container .accordion-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  width: 15px;
+  height: 2px;
+  /*縦線に*/
+  transform: rotate(90deg);
+  background: #fff;
+  transition: all .3s ease-in-out;
+}
+
+.accordion-container .accordion-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  /*横線*/
+  width: 15px;
+  height: 2px;
+  background: #fff;
+  transition: all .2s ease-in-out;
+}
+
+.accordion-container .accordion-title.open::before {
+  transform: rotate(180deg);
+}
+
+.accordion-container .accordion-title.open::after {
+  opacity: 0;
+}
+
+.accordion-content {
+  display: none;
+  padding-left: 2.3125em;
+  border: 1px solid #c09932;
+}
+/* +ボタンの挙動ここまで */
+
+
+.qa_sentence{
+  margin: 80px;
+}
+
+
+.q_reserve_btn{
+  margin: 80px;
+    display: block;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.q_reserve_btn a {
+  color: #e5e2e5;
+  background-color: #c09932;
+  padding: 20px 160px;
+  letter-spacing: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+}
+
+
+
+.tel{
+  margin-top: 30px;
+  font-weight: bold;
+  
+}
+
+.tel h3{
+  font-size: 3rem;
+
+}
+
+
+
+/* -------------------------------------------------------- */
+
+
+@media screen and (max-width:480px){ 
+	/*画面幅が480px以下になったら適用*/
+
+
+    header {
+        position: relative;
+        height: 10vh;
+    }
+
+    
+    /* main */
+    #main_wrapper{
+        margin-top: 80px;
+        background-color: #000000;
+        padding-bottom: 67px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #qa_wrapper{
+      padding: 15px;
+    }
+
+    .accordion-container .accordion-title {
+
+      padding: 0.5rem 2rem 0.75rem 1rem;
+      background-color: #000;
+      font-size: 1.25rem;
+      font-weight: normal;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .accordion-content {
+      padding: 10px;
+      display: none;
+      border: 1px solid #c09932;
+      font-size: 1rem;
+    }
+
+    .q_reserve_btn {
+      margin: 45px 0;
+
+  }
+
+
+    .qa_sentence {
+      margin: 30px 5px;
+    }
+    
+    .qa_sentence>h4{
+      font-size: 1rem;
+    }
+
+    .tel {
+      margin-top: 33px;
+      font-weight: bold;
+    }
+
+    .tel h3 {
+      font-size: 2rem;
+    }
+
+    .q_reserve_btn a {
+      color: #e5e2e5;
+      background-color: #c09932;
+      padding: 15px 30px;
+      letter-spacing: 0;
+      line-height:0;
+  }
+
+    
+
+    
+    /* main_visual */
+    
+	/*レスポンシブデザインここまで*/
+}
+

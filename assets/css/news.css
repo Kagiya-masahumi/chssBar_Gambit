@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+
+
+header{
+    position: relative;
+    height: 30vh;
+}
+
+/* main */
+#main_wrapper{
+    margin-top: 100px;
+    background-color: #000000;
+    padding-bottom: 67px;
+}
+
+.breadcrumb{
+    margin: 30px 60px;
+}
+
+#main_wrapper .more_read_btn{
+    text-align: right;   
+}
+
+
+
+/* news */
+
+#news{
+    height: 100%;
+
+}
+
+#news>dl{
+    margin-left: 100px;
+
+}
+
+#news>dl{
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#news>dt {
+    width: 30%;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+#news>dd {
+    width: 70%;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+#news dl dt{
+    margin-right: 0.5rem ;
+	width: 120px ;
+    margin-bottom: 30px;
+}
+
+#news div dd a{
+    color: #f5f5f5;
+    text-decoration: underline;
+}
+
+.date_news dd{
+    margin-left: 150px;
+    letter-spacing: 0.25rem;
+
+}
+
+
+
+
+/*------------ news end------------ */
+
+
+/* event */
+
+#event{
+    margin-bottom: 200px;
+    padding: 60px;
+
+}
+
+
+#event .e_contents p{
+    margin: 15px;
+    width: 300px;
+
+} 
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------- */
+
+
+@media screen and (max-width:480px){ 
+	/*画面幅が480px以下になったら適用*/
+
+
+
+
+
+    header {
+        position: relative;
+        height: 10vh;
+    }
+
+    
+    /* ------------header end ------------ */
+    
+    /* main */
+    #main_wrapper{
+        margin-top: 80px;
+        background-color: #000000;
+        padding-bottom: 67px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #news {
+        padding:  0;
+    }
+
+
+    #news>dl {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    #news dl dt {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .date_news dd {
+        margin-left:0;
+        letter-spacing: 0;
+        margin-bottom: 60px;
+    }
+
+    #news div dd a {
+        color: #c5c2c5;
+        text-decoration: underline;
+    }
+    
+    #event {
+        margin-bottom: 0; 
+        padding: 38px;
+        width: 100%;
+    }
+
+    #event .e_contents p {
+        margin: 0;;
+        width: auto;
+        margin-bottom: 30px;
+    }
+    
+    /* reserve_btn */
+
+    .m_reserve_btn{
+        display: block;
+        box-sizing: border-box;
+    
+    }
+    
+    .m_reserve_btn a {
+        color: #fff;
+        background-color: #bd9323;
+        padding: 20px 58px;
+    }
+    
+    .m_reserve_btn{
+        margin-bottom: 80px;
+    } 
+    
+
+	
+	/*レスポンシブデザインここまで*/
+}
+
+

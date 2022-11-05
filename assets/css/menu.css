@@ -1,0 +1,381 @@
+@charset "UTF-8";
+
+header {
+    height: 30vh
+}
+#main_wrapper {
+margin-top: 100px;
+background-color: #000000;
+padding-bottom: 67px;
+}
+
+
+
+#menu{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#menu h3{
+    font-size: 1.5rem; /*(24px)*/
+    margin: 30px;
+}
+
+#m_drink{
+    margin-bottom: 80px;
+}
+
+.card{
+    padding: 15px;
+}
+
+
+.to_menu_btn{
+    display: block;
+    text-align: center;
+    margin: 30px 0 100px;
+}
+
+
+.to_menu_btn a{
+    
+    padding: 20px 160px;
+    border: 1px solid #c09932;
+    color: #f5f5f5;
+}
+
+
+.cocktail_lists{
+    text-align: left;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.cocktail_list{
+    flex-wrap: wrap;
+}
+
+.cocktail{
+    margin: 30px;
+}
+
+.cocktail>div{
+    font-size:1rem;
+}
+
+.another_drink li{
+    margin-top: 10px;
+}
+
+
+
+.cocktail li{
+    list-style: inside;
+}
+
+.to_staff{
+    padding: 80px;
+    text-align: right;
+}
+
+
+.food_idx,
+.drink_idx{
+    margin-top: 100px;
+}
+
+
+#m_food{
+    margin-bottom: 100px;
+}
+
+.snack,
+.appetizer,
+.dish{
+    margin: 0;
+}
+
+.snack>h4,
+.appetizer>h4,
+.dish>h4{
+    display: block;
+    margin: 50px;
+    font-weight: bold;
+}
+
+.food_idx>h4{
+    font-size: 1rem;
+    margin: 20px;
+    line-height: 1.5rem;
+}
+
+#menu dl{
+    width: 960px;
+    line-height: 1.5rem;
+}
+
+#menu dt {
+    margin-right: 60px;
+    width: 55%;
+}
+
+#menu dd{
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+/*------------ menu end ------------ */
+
+
+#price{
+    background-image: url(../images/top/top_price_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    padding: 80px 0;
+    margin: 200px 0;
+}
+
+
+
+
+.to_price_btn{
+    display: block;
+    text-align: center;
+    margin: 100px 0 100px;
+}
+
+
+.to_price_btn a{
+    font-style: italic;
+    padding: 30px 160px;
+    border: 1px solid #c09932;
+    color: #f5f5f5;
+}
+
+.p_table>dl{
+    display: inline-block;
+    font-size: 3rem;
+    padding: 50px 100px 5px;
+}
+
+.weekday{
+    margin-bottom: 50px;
+}
+
+.p_table>.weekday>dt {
+    width: 50%;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+
+}
+
+.p_table dd {
+    width: 40%;
+    margin-left: 50px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+
+#price> p{
+
+    margin: 30px 0;
+}
+
+/*------------ price end------------ */
+
+
+/* -------------------------------------------------------- */
+
+
+@media screen and (max-width:480px){ 
+	/*画面幅が480px以下になったら適用*/
+
+
+
+
+    header {
+        position: relative;
+        height: 10vh;
+    }
+
+
+    
+    /* main */
+    #main_wrapper{
+        margin-top: 80px;
+        background-color: #000000;
+        padding-bottom: 67px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .food_idx, .drink_idx {
+        margin-top: 100px;
+        padding: 15px;
+    }
+
+    .to_staff {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .snack, .appetizer, .dish {
+        margin: 0;
+        padding: 0;
+    }
+
+    .snack>h4, 
+    .appetizer>h4,
+    .dish>h4 {
+        display: block;
+        margin: 50px;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    #menu dl {
+        width: auto;
+        line-height: 1.5rem;
+    }
+
+    #menu dt {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    #menu dd {
+        width: 100%;
+        margin-bottom: 45px;
+    }
+
+
+
+    /* event */
+
+    .e_contents{
+        padding: 15px;
+        margin: 30px 0;
+    }
+
+
+
+
+    /* price */
+
+    #price{
+        background-image: none;
+
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    
+
+
+    
+
+    #price dl{
+    width: 100%;
+    line-height: 1.5rem;
+    }
+
+    #price dt {
+        width: 100%;
+        margin-bottom: 30px;
+        
+    }
+
+    #price dd{
+        width: 100%;
+        margin-bottom: 20px;
+        color: #fff;
+        text-decoration: underline #ac1b1b;
+    }
+        
+    
+
+
+
+    .to_price_btn a {
+        font-style: italic;
+        padding: 20px 80px;
+        border: 1px solid #c09932;
+        color: #f5f5f5;
+    }
+
+    
+    .reserve_btn,
+    .m_reserve_btn{
+        display: block;
+        box-sizing: border-box;
+    }
+
+    .m_reserve_btn a{
+        color: #fff;
+        background-color: #bd9323;
+        padding: 15px 80px;
+    }
+
+    .to_menu_btn{
+        display: block;
+        text-align: center;
+        margin: 30px 0 100px;
+    }
+
+
+    .to_menu_btn a {
+        padding: 21px 80px;
+        border: 1px solid #c09932;
+        color: #f5f5f5;
+    }
+
+
+
+    .p_table>dl {
+        display: inline-block;
+        font-size: 3rem;
+        padding: 50px 3px 5px;
+        margin-bottom: 50px;
+    }
+
+
+
+
+    
+    
+    /* reserve_btn */
+    .reserve_btn,
+    .m_reserve_btn{
+        display: block;
+        box-sizing: border-box;
+    
+    }
+    
+    .m_reserve_btn a {
+        color: #fff;
+        background-color: #bd9323;
+        padding: 20px 58px;
+    }
+    
+    .m_reserve_btn{
+        margin-bottom: 80px;
+    } 
+    
+    
+
+
+	
+	/*レスポンシブデザインここまで*/
+}
+
